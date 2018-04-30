@@ -2,7 +2,7 @@
 //  EmojiTableViewController.swift
 //  Emoji Dictionary
 //
-//  Created by Zeba Hashimi on 4/26/18.
+//  Created by Zeba Khan on 4/26/18.
 //  Copyright © 2018 Zeba Khan. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
 
-    var emojis = ["😂", "😭", "😁", "🤞", "😉"]
+    var emojis = ["😂", "😭", "😁", "🤞", "😉", "🏘", "⛪️", "🕋"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,16 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ourSegue", sender: nil)
+        
+        let emoji = emojis[indexPath.row]
+        
+        performSegue(withIdentifier: "ourSegue", sender: emoji)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let emojiDefVC = segue.destination as! EmojiDefinitionViewController
+        emojiDefVC.emoji = sender as! String
+        
     }
     
 
