@@ -60,7 +60,19 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face with tears of joy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-Ii-PdO">
                                 <rect key="frame" x="10" y="633" width="355" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HME-kd-jl6">
+                                <rect key="frame" x="126.5" y="592" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Human" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cu-jw-zkw">
+                                <rect key="frame" x="120" y="551" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,13 +81,19 @@
                         <constraints>
                             <constraint firstItem="Cdd-Ii-PdO" firstAttribute="leading" secondItem="FOV-jt-Qvm" secondAttribute="leading" constant="10" id="0Nz-fR-IOW"/>
                             <constraint firstItem="ceJ-J7-SCo" firstAttribute="centerX" secondItem="eqW-HV-Y3A" secondAttribute="centerX" id="M7N-b3-8oD"/>
+                            <constraint firstItem="3Cu-jw-zkw" firstAttribute="centerX" secondItem="eqW-HV-Y3A" secondAttribute="centerX" id="ZNS-Dj-Fa1"/>
+                            <constraint firstItem="Cdd-Ii-PdO" firstAttribute="top" secondItem="HME-kd-jl6" secondAttribute="bottom" constant="20" id="cLh-3O-hQL"/>
+                            <constraint firstItem="HME-kd-jl6" firstAttribute="top" secondItem="3Cu-jw-zkw" secondAttribute="bottom" constant="20" id="fdF-SZ-nFW"/>
                             <constraint firstItem="ceJ-J7-SCo" firstAttribute="top" secondItem="FOV-jt-Qvm" secondAttribute="top" constant="20" id="k6j-MO-QbU"/>
+                            <constraint firstItem="HME-kd-jl6" firstAttribute="centerX" secondItem="eqW-HV-Y3A" secondAttribute="centerX" id="kGX-ag-rcS"/>
                             <constraint firstItem="FOV-jt-Qvm" firstAttribute="bottom" secondItem="Cdd-Ii-PdO" secondAttribute="bottom" constant="10" id="mVD-RG-6Oa"/>
                             <constraint firstItem="FOV-jt-Qvm" firstAttribute="trailing" secondItem="Cdd-Ii-PdO" secondAttribute="trailing" constant="10" id="nXG-XX-Pxl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOV-jt-Qvm"/>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="HME-kd-jl6" id="IV5-xo-hp7"/>
+                        <outlet property="categoryLabel" destination="3Cu-jw-zkw" id="fF5-J8-AhT"/>
                         <outlet property="emojiDefinitionLabel" destination="Cdd-Ii-PdO" id="g6f-Vg-mAt"/>
                         <outlet property="emojiLabel" destination="ceJ-J7-SCo" id="Wue-zY-nQU"/>
                     </connections>
